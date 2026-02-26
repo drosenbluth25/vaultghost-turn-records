@@ -1,0 +1,49 @@
+{
+  "schema": "VaultGhost.TurnRecord.v1",
+  "conversation_id": "vg-7700228d-6d34-430f-892a-09e959bfb74b",
+  "turn_index": 2,
+  "timestamp_utc": "2026-02-25T23:45:00Z",
+  "prev_turn_hash": "8494ebbba25de885c5948ace608b9b0a0e337ba4ed8d79b74aa9929fc22b02ac",
+  "content": {
+    "user_prompt_sha256": "22eef75ac4fd4c76c3a40f3b0f2bf48af4c72f3ccb5f7f829e1ccd6edce5460a",
+    "assistant_response_body_sha256": "84375d0f813e50dbf097c0df141afc30361d2e331ae17d686de2ad4bead0da97"
+  },
+  "hash_chain": {
+    "turn_hash_algo": "sha256",
+    "turn_hash_input": "vg-turn-v1\nconversation_id:vg-7700228d-6d34-430f-892a-09e959bfb74b\nturn_index:2\ntimestamp_utc:2026-02-25T23:45:00Z\nprev_turn_hash:8494ebbba25de885c5948ace608b9b0a0e337ba4ed8d79b74aa9929fc22b02ac\nuser_prompt_sha256:22eef75ac4fd4c76c3a40f3b0f2bf48af4c72f3ccb5f7f829e1ccd6edce5460a\nassistant_response_body_sha256:84375d0f813e50dbf097c0df141afc30361d2e331ae17d686de2ad4bead0da97\n",
+    "turn_hash": "3fa6f102e659e2a7b752ce8fe99ceff23325608ec97111ed0e56a4fc54a2531d"
+  },
+  "tool_calls": [
+    {
+      "name": "code_execution",
+      "purpose": "Canonicalization, SHA-256 verification, turn record assembly",
+      "notes": "Executed in hosted REPL; verify independently with your own audited toolchain."
+    }
+  ],
+  "policy_overrides": [],
+  "attachments": {
+    "ots_simulated_proof": {
+      "schema": "OpenTimestamps.SimulatedProof.v1",
+      "stamped_digest": "3fa6f102e659e2a7b752ce8fe99ceff23325608ec97111ed0e56a4fc54a2531d",
+      "ops": [
+        { "op": "prepend", "arg": "merkle:" },
+        { "op": "sha256", "result": "7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a1f2e3d4c5b6a7f8" },
+        { "op": "prepend", "arg": "txid:" },
+        { "op": "sha256", "result": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2" }
+      ],
+      "chain": {
+        "name": "bitcoin",
+        "txid": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+        "block_height": 900001,
+        "block_time_utc": "2026-02-26T01:00:00Z"
+      },
+      "note": "Simulated receipt: no network submission performed."
+    }
+  },
+  "canonicalization": {
+    "encoding": "utf-8",
+    "newlines": "LF",
+    "ensure_terminal_newline": true,
+    "strip_trailing_whitespace": true
+  }
+}

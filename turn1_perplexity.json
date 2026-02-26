@@ -1,0 +1,49 @@
+{
+  "schema": "VaultGhost.TurnRecord.v1",
+  "conversation_id": "vg-7700228d-6d34-430f-892a-09e959bfb74b",
+  "turn_index": 1,
+  "timestamp_utc": "2026-02-25T23:35:31Z",
+  "prev_turn_hash": "44a1e194d1bc9474742e6ddc757e4b3e679b591ba23882c47291c552dba95473",
+  "content": {
+    "user_prompt_sha256": "5182882ff030bdef56ae32a426d988397f3df7b61eed31d6222fa9c089629938",
+    "assistant_response_body_sha256": "5dae0678e24f127ec86fd19e9084e55708f63c89de59b6bbae13d601dc8e4209"
+  },
+  "hash_chain": {
+    "turn_hash_algo": "sha256",
+    "turn_hash_input": "vg-turn-v1\nconversation_id:vg-7700228d-6d34-430f-892a-09e959bfb74b\nturn_index:1\ntimestamp_utc:2026-02-25T23:35:31Z\nprev_turn_hash:44a1e194d1bc9474742e6ddc757e4b3e679b591ba23882c47291c552dba95473\nuser_prompt_sha256:5182882ff030bdef56ae32a426d988397f3df7b61eed31d6222fa9c089629938\nassistant_response_body_sha256:5dae0678e24f127ec86fd19e9084e55708f63c89de59b6bbae13d601dc8e4209\n",
+    "turn_hash": "8494ebbba25de885c5948ace608b9b0a0e337ba4ed8d79b74aa9929fc22b02ac"
+  },
+  "tool_calls": [
+    {
+      "name": "functions.execute_code",
+      "purpose": "Compute SHA-256 hashes and assemble simulated reduction-to-practice artifacts",
+      "notes": "Executed in a hosted environment; verify independently with your own audited toolchain."
+    }
+  ],
+  "policy_overrides": [],
+  "attachments": {
+    "ots_simulated_proof": {
+      "schema": "OpenTimestamps.SimulatedProof.v1",
+      "stamped_digest": "8494ebbba25de885c5948ace608b9b0a0e337ba4ed8d79b74aa9929fc22b02ac",
+      "ops": [
+        { "op": "prepend", "arg": "merkle:" },
+        { "op": "sha256", "result": "18ef521e974f4547efaaf1f6dfc0b4b3960aecc69e67616d6a9166b8b3a181cf" },
+        { "op": "prepend", "arg": "txid:" },
+        { "op": "sha256", "result": "e969d50390790bf27d7d91629313666fa13a87e1edb46069a35c38755868be34" }
+      ],
+      "chain": {
+        "name": "bitcoin",
+        "txid": "e969d50390790bf27d7d91629313666fa13a87e1edb46069a35c38755868be34",
+        "block_height": 900000,
+        "block_time_utc": "2026-02-26T00:00:00Z"
+      },
+      "note": "Simulated receipt: no network submission performed."
+    }
+  },
+  "canonicalization": {
+    "encoding": "utf-8",
+    "newlines": "LF",
+    "ensure_terminal_newline": true,
+    "strip_trailing_whitespace": true
+  }
+}
