@@ -10,7 +10,7 @@ The hash chain (`prev_turn_hash`) links all three turns, and each turn includes 
 
 ## Immutable Proof of Existence
 
-The hash of the final turn (Turn 3) has been anchored to the Bitcoin blockchain via OpenTimestamps. This provides independent, immutable proof that this chain of evidence existed at or before the timestamp of the Bitcoin block.
+The hash of the final turn (Turn 3) has been anchored to the Bitcoin blockchain via OpenTimestamps (Confirmed at Bitcoin block height 938388). This provides independent, immutable proof that this chain of evidence existed at or before the timestamp of the Bitcoin block.
 
 - **Hash File**: `latest_turn_hash.txt` (Contains the SHA-256 hash of Turn 3)
 - **OTS Receipt**: `latest_turn_hash.txt.ots`
