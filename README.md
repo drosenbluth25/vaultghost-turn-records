@@ -10,7 +10,7 @@ The hash chain (`prev_turn_hash`) links all three turns, and each turn includes 
 
 ## Immutable Proof of Existence
 
-The hash of the final turn (Turn 3) has been anchored to the Bitcoin blockchain via OpenTimestamps (Confirmed at Bitcoin block height 938388). This provides independent, immutable proof that this chain of evidence existed at or before the timestamp of the Bitcoin block.
+The hash of the final turn (Turn 3) has been submitted for OpenTimestamps anchoring. The current repository receipt (`latest_turn_hash.txt.ots`) does not itself contain a committed Bitcoin block attestation; no Bitcoin anchoring claim is made unless `ots verify` resolves to a confirmed Bitcoin block height and timestamp, or an upgraded receipt/log proving such confirmation is added to the evidence record.
 
 - **Hash File**: `latest_turn_hash.txt` (Contains the SHA-256 hash of Turn 3)
 - **OTS Receipt**: `latest_turn_hash.txt.ots`
@@ -24,19 +24,18 @@ To verify any turn, recompute the `turn_hash` using the provided `turn_hash_inpu
 echo -n "<exact turn_hash_input>" | sha256sum
 ```
 
-### 2. Verify the Bitcoin Anchor
+### 2. Verify the OpenTimestamps Receipt
 To verify the OpenTimestamps proof, use the `ots` client:
 
 ```bash
 # Install the client
 pip install opentimestamps-client
 
-# Verify the proof (Note: May take a few hours for the initial block confirmation)
+# Verify the proof
 ots verify latest_turn_hash.txt.ots
 ```
 
 For more information, see the [OpenTimestamps documentation](https://opentimestamps.org).
 
 ## License
-
 Apache 2.0 (code) / CC BY‑SA 4.0 (documentation)
